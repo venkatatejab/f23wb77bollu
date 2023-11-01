@@ -2,10 +2,15 @@ extends layout
 block content
     div(class="container-fluid")
         h1= title
-    - let results=[{goat_color:"brown",goat_breed:"nubian goat",goat_price:2000},{goat_color:"white",goat_breed:"saanen goat",goat_price:5500},{goat_color:"black",goat_breed:"boer",goat_price:4000}]
+    - let results=[{ant_color:"brown",ant_breed:"Brown ant",ant_price:2000},{ant_color:"white",ant_breed:"Angora ant",ant_price:5500},{ant_color:"black",ant_breed:"Black ant",ant_price:4000}]
         div(class="row")
             each form,item in results
-                div(class = "col-sm-2 bg-secondary" onclick=`buy(${item})`) #{form.goat_color}              
-                div(class = "col-sm-2 bg-secondary" onclick=`buy(${item})`) #{form.goat_breed}                
-                div(class = "col-sm-2 bg-secondary" onclick=`buy(${item})`) #{form.goat_price}
+                div(class = "col-sm-2 bg-secondary" onclick=`buy(${item})`) #{form.ant_color}             
+                div(class = "col-sm-2 bg-secondary" onclick=`buy(${item})`) #{form.ant_breed}          
+                div(class = "col-sm-2 bg-secondary" onclick=`buy(${item})`) #{form.ant_price}
                 hr
+    script.
+        function buy(itemNo)
+        {
+            alert(`You purchased Item ${itemNo+1}`)
+        }
