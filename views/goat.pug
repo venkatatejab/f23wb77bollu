@@ -5,9 +5,9 @@ block content
     - let results=[{goat_color:"brown",goat_breed:"Flemish Giant goat",goat_price:2000},{goat_color:"white",goat_breed:"Angora goat",goat_price:5500},{goat_color:"black",goat_breed:"Havana",goat_price:4000}]
         div(class="row")
             each form,item in results
-                div(class = "col-sm-2 bg-primary" onclick=`buy(${item})`) #{form.goat_color}              
-                div(class = "col-sm-2 bg-primary" onclick=`buy(${item})`) #{form.goat_breed}                
-                div(class = "col-sm-2 bg-primary" onclick=`buy(${item})`) #{form.goat_price}
+                div(class = "col-sm-2 bg-secondary" onclick=`buy(${item})`) #{form.goat_color}              
+                div(class = "col-sm-2 bg-secondary" onclick=`buy(${item})`) #{form.goat_breed}                
+                div(class = "col-sm-2 bg-secondary" onclick=`buy(${item})`) #{form.goat_price}
                 hr
     script.
         function buy(itemNo)
